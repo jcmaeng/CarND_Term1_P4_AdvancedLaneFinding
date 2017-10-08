@@ -14,6 +14,10 @@ This is my repository to manage source code for finding lane lines. It is the fo
 
 # Usage
 
-- Download all files
-- run "python lane_finding.py"
-- check ./output_images
+1. check "output_images" folder
+or
+1. Download files from ![Udacity project repo](https://github.com/udacity/CarND-Advanced-Lane-Lines)
+2. Download this repo
+3. copy lane_finding.py to above location
+4. run "python lane_finding.py"
+5. check ./output_images
