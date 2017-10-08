@@ -10,7 +10,7 @@ This is my repository to manage source code for finding lane lines. It is the fo
 - writeup.md: Project writeup markdown file
 - camera_cal\/\*: given image files to calibrate camera
 - output_images\/\*.jpg: output images for describing each pipeline stage
-- output_images\/\out_project.mp4: result video file
+- output_images\/out_project.mp4: result video file
 
 # Usage
 
