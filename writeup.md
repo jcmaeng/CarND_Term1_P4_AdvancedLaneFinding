@@ -25,7 +25,7 @@ The goals / steps of this project are the following:
 [image3-8]: ./output_images/p8_result.jpg "Result"
 [image4]: ./output_images/p7-1_lane_curvature.jpg "Lane Curvature"
 [image5]: ./examples/color_fit_lines.jpg "Fit Visual"
-[video1]: ./out_images/out_project.mp4 "Video"
+[video1]: ./output_images/out_project.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
