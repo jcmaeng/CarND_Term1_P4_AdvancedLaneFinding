@@ -110,7 +110,7 @@ class LaneLineFinder():
         # cv2.waitKey()
 
         # save output result of camera calibration and image undistortion
-        #cv2.imwrite('./output_images/cal1-undistorted.jpg', undistorted)
+        cv2.imwrite('./output_images/cal2-undistorted.jpg', undistorted)
 
         return objpoints, imgpoints
 
@@ -359,6 +359,12 @@ class LaneLineFinder():
 
         # limg = mpimg.imread(self.lane_img)
         limg = img.copy()
+
+        # contrast correction for initial image
+        limg = cv2.cvtColor(limg, cv2.COLOR_RGB2YUV)
+        limg[:,:,0] = cv2.equalizeHist(limg[:,:,0])
+        limg = cv2.cvtColor(limg, cv2.COLOR_YUV2RGB)
+
         limg_undist = self.cal_undistort(limg, self.objp, self.imgp)
 
         # cv2.imshow('undistorted lane image', limg_undist)
