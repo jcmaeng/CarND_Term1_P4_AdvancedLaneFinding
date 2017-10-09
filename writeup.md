@@ -29,7 +29,7 @@ The goals / steps of this project are the following:
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
-### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
+### Here I will consider the rubric points individually and describe how I addressed each point in my implementation. I used codes from class examples. It's a good stating point for me. 
 
 ---
 
@@ -43,7 +43,7 @@ You're reading it!
 
 #### 1. Briefly state how you computed the camera matrix and distortion coefficients. Provide an example of a distortion corrected calibration image.
 
-The code for this step is contained in the member function called camera_calibration() located in "lane_finding.py".  
+The code for this step is contained in the member function called `camera_calibration()` located in "lane_finding.py".  
 
 I start by preparing "object points", which will be the (x, y, z) coordinates of the chessboard corners in the world. Here I am assuming the chessboard is fixed on the (x, y) plane at z=0, such that the object points are the same for each calibration image.  Thus, `objp` is just a replicated array of coordinates, and `objpoints` will be appended with a copy of it every time I successfully detect all chessboard corners in a test image.  `imgpoints` will be appended with the (x, y) pixel position of each of the corners in the image plane with each successful chessboard detection.  
 
@@ -60,7 +60,7 @@ To demonstrate this step, I will describe how I apply the distortion correction 
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
-First of all, I convert the color space of undistorted road image to HLS and grayscale. Then I apply Sobel() to obtain thresholded x gradient and take thresholded data from S and L channels. With these data, I could  generate a binary image through combining color and gradient thresholds (thresholding steps at lines 385 through 414 in process_image() function). 
+First of all, I convert the color space of undistorted road image to HLS and grayscale. Then I apply `cv2.Sobel()` to obtain thresholded x gradient and take thresholded data from S and L channels. With these data, I could  generate a binary image through combining color and gradient thresholds (thresholding steps at lines 385 through 414 in `process_image()` function). 
 This image is undistorted original image.
 
 ![alt text][image3-1]
@@ -114,7 +114,7 @@ This image shows found lane lines.
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-I did this in calculate_curvature() function at lines 289 through 340.
+I did this in `calculate_curvature()` function at lines 289 through 340.
 
 ![alt text][image4]
 
@@ -122,7 +122,7 @@ I did this in calculate_curvature() function at lines 289 through 340.
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-I implemented this step in draw_lane_to_img() at lines 269 through 287 in my code. Here is an example of my result on a test image:
+I implemented this step in `draw_lane_to_img()` at lines 269 through 287 in my code. Here is an example of my result on a test image:
 
 ![alt text][image3-8]
 
