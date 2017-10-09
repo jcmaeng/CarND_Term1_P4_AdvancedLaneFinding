@@ -10,6 +10,8 @@ This is my repository to manage source code for finding lane lines. It is the fo
 - camera_cal\/\*: given image files to calibrate camera
 - output_images\/\*.jpg: output images for describing each pipeline stage
 - output_images\/out_project.mp4: result video file
+- examples\/color_fit_lines.jpg: example image to describe some step
+- test_images\/test1.jpg: pipeline test image
 
 # Usage
 
